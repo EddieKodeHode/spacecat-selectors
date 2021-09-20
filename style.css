@@ -6,6 +6,11 @@
 
 body {
     background-color: black;
+    background-image: url(https://wallup.net/wp-content/uploads/2016/01/44910-space-nebula-stars-planet.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: none;
 }
 
 header {
@@ -16,6 +21,8 @@ header {
     transition: 2s;
     height: 4em;
     overflow: hidden;
+    z-index: 1;
+    position: relative;
 }
 
 header:hover {
@@ -31,18 +38,19 @@ header p {
 }
 
 main {
-    background-color: violet;
+    background-color: rgba(0, 0, 0, 0.5);
     min-width: 300px;
     max-width: 70vw;
     margin: auto;
     display: flex;
     flex-flow: row wrap;
     border-radius: 0px 0px 15px 15px;
+    z-index: 1;
 
 }
 
 .contentBox {
-    color: red;
+    color: blueviolet;
     border: 1px solid;
     margin: 1em;
     padding: 1em;
@@ -52,18 +60,22 @@ main {
     transition: 1s;
     height: 100px;
     overflow: hidden;
+    z-index: 1;
 }
 
 .contentBox:nth-child(3) {
     background-image: url(https://ukmadcat.com/wp-content/uploads/2019/04/sleepy-cat.jpg);
     background-size: cover;
     background-position: center;
+    filter: grayscale(80%);
 }
 
 .contentBox:hover {
-    border: 3px solid;
+    border: 5px solid;
     transition: 1s;
     height: 200px;
+    filter: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .contentBox a {
@@ -74,4 +86,55 @@ main {
 .contentBox a:hover {
     color: blue;
     transition: 0.5s;
+}
+
+footer {
+    height: 1px;
+    width: 1px;
+    right: 8vw;
+    top: 200px;
+    position:absolute;
+    z-index: 0;
+}
+
+#animation {
+    background-image: url(images/spacecat.png);
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    position: relative;
+    animation: cat;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 0;
+
+}
+
+@keyframes cat {
+    0% {bottom:30px; right:0;}
+    10% {bottom: 50px; right: 10vw;}
+    20% {bottom: 30px; right: 20vw;}
+    30% {bottom: 50px; right: 30vw}
+    40% {bottom: 30px; right: 40vw;}
+    50% {bottom: 50px; right: 50vw}
+    60% {bottom: 30px; right: 60vw;}
+    70% {bottom: 50px; right: 70vw}
+    80% {bottom: 30px; right: 80vw;}
+    90% {bottom: 50px; right: 90vw}
+    100% {bottom:30px; right:100vw; transform: rotate(360deg);}
+}
+
+#sticker {
+    background-image: url(images/spacecat.png);
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    transform: scaleX(-1)
+}
+
+#sticker:hover {
+    background-image: url(images/spacecat\ hover.png);
 }
