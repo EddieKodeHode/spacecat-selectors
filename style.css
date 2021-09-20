@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    background-color: blueviolet;
+    color: #FFF;
+    text-align: center;
+    padding: 1em;
+    transition: 2s;
+    height: 4em;
+    overflow: hidden;
+}
+
+header:hover {
+    background-color: violet;
+    color: #000;
+    transition: 2s;
+    height: 6em;
+}
+
+header p {
+    margin-top: 2em;
+    color: blueviolet;
+}
+
+main {
+    background-color: violet;
+    min-width: 300px;
+    max-width: 70vw;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    border-radius: 0px 0px 15px 15px;
+
+}
+
+.contentBox {
+    color: red;
+    border: 1px solid;
+    margin: 1em;
+    padding: 1em;
+    width: 230px;
+    border-radius: 15px;
+    background-color: #bbb6ff;
+    transition: 1s;
+    height: 100px;
+    overflow: hidden;
+}
+
+.contentBox:nth-child(3) {
+    background-image: url(https://ukmadcat.com/wp-content/uploads/2019/04/sleepy-cat.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.contentBox:hover {
+    border: 3px solid;
+    transition: 1s;
+    height: 200px;
+}
