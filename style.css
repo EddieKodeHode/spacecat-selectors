@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -25,7 +26,7 @@ header:hover {
 }
 
 header p {
-    margin-top: 2em;
+    margin-top: 1em;
     color: blueviolet;
 }
 
@@ -63,4 +64,14 @@ main {
     border: 3px solid;
     transition: 1s;
     height: 200px;
+}
+
+.contentBox a {
+    color: brown;
+    transition: 0.5s;
+}
+
+.contentBox a:hover {
+    color: blue;
+    transition: 0.5s;
 }
